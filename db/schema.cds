@@ -2,6 +2,7 @@ namespace galactic.spacefarer;
 
 using { cuid, managed } from '@sap/cds/common';
 
+@assert.range
 type SpacesuitColor : String enum {
     White;
     Black;
@@ -11,6 +12,10 @@ type SpacesuitColor : String enum {
     Green;
     Blue;
     Purple;
+}
+
+entity SpacesuitColors {
+    key code : String(20);
 }
 
 entity Planets : cuid, managed {

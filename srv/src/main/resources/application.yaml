@@ -1,10 +1,19 @@
 ---
 spring:
-  config.activate.on-profile: default
-  sql.init.platform: h2
-
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:file::memory:?cache=shared
+    hikari:
+      max-lifetime: 0
+      maximum-pool-size: 1
+  config:
+    activate:
+      on-profile: default
+  sql:
+    init:
+      mode: always
+      platform: sqlite
 cds:
-  data-source.auto-config.enabled: false
   security:
     mock:
       defaultUsers: false
@@ -13,22 +22,19 @@ cds:
           password: terra
           attributes:
             planet:
-              - "00000000-0000-0000-0000-000000000001"
-
+            - 00000000-0000-0000-0000-000000000001
         y-user:
           password: y
           attributes:
             planet:
-              - "00000000-0000-0000-0000-000000000002"
-
+            - 00000000-0000-0000-0000-000000000002
         titan-user:
           password: titan
           attributes:
             planet:
-              - "00000000-0000-0000-0000-000000000003"
-
+            - 00000000-0000-0000-0000-000000000003
         hana-user:
           password: hana
           attributes:
             planet:
-              - "00000000-0000-0000-0000-000000000004"
+            - 00000000-0000-0000-0000-000000000004

@@ -45,8 +45,7 @@ public class SpacefarerEventHandler implements EventHandler {
             stardustCollection = 0L;
         }
 
-        // Improve navigation skill by 10% of the remaining distance to 100,
-        // rounded upward.
+        // Improve navigation skill by 10% of the remaining distance to 100, rounded upward.
         int skillEnhancement = (int) Math.ceil(
             (MAX_NAVIGATION_SKILL - navigationSkill) * SKILL_ENHANCEMENT_RATE
         );
