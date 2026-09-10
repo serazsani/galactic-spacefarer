@@ -2,6 +2,17 @@ namespace galactic.spacefarer;
 
 using { cuid, managed } from '@sap/cds/common';
 
+type SpacesuitColor : String enum {
+    White;
+    Black;
+    Red;
+    Orange;
+    Yellow;
+    Green;
+    Blue;
+    Purple;
+}
+
 entity Planets : cuid, managed {
     name        : String(100) not null;
     description : String(500);
@@ -34,5 +45,5 @@ entity Spacefarers : cuid, managed {
     department                  : Association to Departments not null;
     position                    : Association to Positions not null;
 
-    spacesuitColor              : String(50);
+    spacesuitColor              : SpacesuitColor not null;
 }
