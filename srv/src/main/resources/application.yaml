@@ -1,7 +1,34 @@
-
 ---
 spring:
   config.activate.on-profile: default
   sql.init.platform: h2
+
 cds:
   data-source.auto-config.enabled: false
+  security:
+    mock:
+      defaultUsers: false
+      users:
+        terra-user:
+          password: terra
+          attributes:
+            planet:
+              - "00000000-0000-0000-0000-000000000001"
+
+        y-user:
+          password: y
+          attributes:
+            planet:
+              - "00000000-0000-0000-0000-000000000002"
+
+        titan-user:
+          password: titan
+          attributes:
+            planet:
+              - "00000000-0000-0000-0000-000000000003"
+
+        hana-user:
+          password: hana
+          attributes:
+            planet:
+              - "00000000-0000-0000-0000-000000000004"
