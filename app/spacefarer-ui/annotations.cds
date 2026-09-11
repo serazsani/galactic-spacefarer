@@ -146,7 +146,10 @@ annotate service.Spacefarers with {
     wormholeNavigationSkill @title : 'Wormhole Navigation Skill';
     spacesuitColor @title : 'Spacesuit Color';
 
-    
+    originPlanet @title: 'Origin Planet';
+    department @title: 'Department';
+    position @title: 'Position';
+
     stardustStatus @title : 'Stardust Status';
 };
 
